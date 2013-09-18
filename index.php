@@ -14,8 +14,10 @@
             echo "it's a clovis!";
             break;
         case "narrow stem":
+            echo "it's a narrow stem";
+            break;
         case "levanna":
-            echo"it's either a narrow stem or a levanna";
+            echo"it's a levanna";
             break;
         default:
             echo"guess again";
