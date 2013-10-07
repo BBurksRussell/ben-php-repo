@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Reconstructing the Person Class</title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+      <?php
+      //this is where I create a class called Person. It has four
+      //properties, which will remain empty.
+        class Person{
+            public $isAlive = true;
+            public $firstname;
+            public $lastname;
+            public $age;
+       //This block of code assures that the values assigned to the object 
+       //variables and the class variables are the same?
+        public function __construct($firstname, $lastname, $age){
+         $this -> firstname = $firstname;
+         $this -> lastname = $lastname;
+         $this -> age = $age;
+        }
+        public function greet(){
+            return "Hello, my name is " . $this->firstname . " " . $this ->lastname . ". Nice to meet you! :-)";
+        }
+        }
+        //Here I instantiate two new objects of the Person class. They are     
+        //called teacher and student. At the same time I am assigning 
+        //values to their properties
+        $teacher = new Person("boring", "12345", 12345);
+        $student = new Person("ben", "russell", 28);
+      
+    
+      
+     //I am echoing or printing the age of the student object.
+     
+     echo $student -> greet();
+     echo $teacher -> greet();
+      ?>
+      </p>
+    </body>
+</html>
